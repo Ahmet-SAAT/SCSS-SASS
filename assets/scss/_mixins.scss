@@ -1,0 +1,22 @@
+//mixinleri tekrar cagirabilecegimiz stil olarak dusunebiliriz.
+//mixin dosyasi ayri bir dosyada da olusturulabilir
+
+
+@mixin reset-list {//basina @mixin koyariz
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin flexbox(
+    $flex-direction: row,
+    $justify-content: flex-start,
+    $align-items: stretch,
+    $gap: 0
+) {//verileri parametre olarak kullanici girsin girmezse default degerler girsin
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
